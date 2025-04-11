@@ -1,12 +1,12 @@
 === Document Embedder Addon for Elementor- Best Elementor Docs Embedder ===
 Plugin Name: Document Embedder Addon For Elementor
 Version: 1.0.0
-Author: abuhayat
+Author: abuhayat,shehabulislam
 Author URI: http://bplugins.com
 Contributors: abuhayat,bplugins, shehabulislam
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs 
-Requires at least: 4.6
-Tested up to: 6.6.2
+Requires at least: 4.8
+Tested up to: 6.7.2
 Stable tag: 1.0.3
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
@@ -19,6 +19,8 @@ Elevate your Elementor pages with Document Embedder Addon's powerful widgets. Ea
 
 
 Document Embedder Addon For Elementor is a collection of powerful Document widgets that works perfectly with Elementor page builder. It has 12 widgets so you can easy-to-use elements that were designed to make your next WordPress page.
+
+**[See Live Demo](https://bplugins.com/products/document-embedder-addons-for-elementor/ "Demo")** 
 
 Document Embedder Addon for Elementor seamlessly integrates a variety of document formats into your WordPress website. 
 
