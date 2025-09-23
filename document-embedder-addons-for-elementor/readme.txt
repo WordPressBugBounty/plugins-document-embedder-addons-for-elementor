@@ -1,59 +1,124 @@
-=== Document Embedder Addon for Elementor- Best Elementor Docs Embedder ===
+=== Document Embedder Addon for Elementor – Embed Documents in Elementor Websites ===
 Plugin Name: Document Embedder Addon For Elementor
 Version: 1.0.0
-Author: abuhayat,shehabulislam
+Author: bplugins, abuhayat, shehabulislam
 Author URI: http://bplugins.com
 Contributors: abuhayat,bplugins, shehabulislam
-Tags: elementor, elementor addons, elementor widget, embed pdf, google docs 
-Requires at least: 4.8
-Tested up to: 6.7.2
-Stable tag: 1.0.3
+Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
+Requires at least: 4.9
+Tested up to: 6.8
+Stable tag: 1.0.4
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Elevate your Elementor pages with Document Embedder Addon's powerful widgets. Easily integrate 12 user-friendly elements
+Document Embedder Addon for Elementor lets you embed PDF, Word, Google Docs, and other documents using 12 customizable and responsive widgets.
 
 == Description ==
+**Easily Embed Word, Excel, PowerPoint, PDF, and Google Docs into Your Elementor Website— No Code Needed!**
 
 
-Document Embedder Addon For Elementor is a collection of powerful Document widgets that works perfectly with Elementor page builder. It has 12 widgets so you can easy-to-use elements that were designed to make your next WordPress page.
+[**Document Embedder Addon for Elementor**](https://bplugins.com/products/document-embedder-addons-for-elementor/) | [**Pricing**](https://bplugins.com/products/document-embedder-addons-for-elementor/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/document-embedder-addons-for-elementor/#demos)
 
-**[See Live Demo](https://bplugins.com/products/document-embedder-addons-for-elementor/ "Demo")** 
+[**Document Embedder Addon for Elementor**](https://bplugins.com/products/document-embedder-addons-for-elementor/) is a collection of 12 document display widgets designed for use with the Elementor page builder. It allows users to embed files such as PDFs, Word documents, Excel sheets, PowerPoint presentations, and Google Docs directly into WordPress pages with adjustable layout controls.
 
-Document Embedder Addon for Elementor seamlessly integrates a variety of document formats into your WordPress website. 
+Built specifically for Elementor, the plugin helps users display document content within the page structure, without requiring downloads or redirecting visitors. Documents can be embedded with layout customization options, including width, height, and alignment. This helps improve readability and maintain consistent formatting across different devices and screen sizes.
 
-Whether you need to showcase Word documents, Excel spreadsheets, PowerPoint presentations, or Google Docs, this addon has you covered with its extensive range of features.
-
-With the Doc Embedder addon, you can effortlessly display documents while customizing layout settings such as Width, Height, and Alignment to suit your website's design. 
-
-The Word Viewer addon allows you to view MS Word files with options to adjust Height, Width, and alignment, and even display the filename with a convenient download button for easy access.
-
-For Excel files, both embedding and viewing are made simple with dedicated addons that offer control over layout parameters like Width, Height, and Alignment. 
-
-The same goes for PowerPoint presentations, Google Docs, Sheets, and Slides – you can easily embed or view these documents while tailoring the display to your preferences.
-
-With the PDF Native Embedder addon, viewing PDF files directly on your website is a breeze. Customize Height, Width, and alignment settings, and provide users with the option to download the file for offline access.
-
-Upgrade to the Pro version to unlock the PDF Embedder addon, which offers additional customization options for viewing PDF files, including Width, Height, and Alignment.
+The widgets are suitable for websites that publish instructional materials, business files, templates, or internal documentation. No additional configuration is required beyond using the widgets within the Elementor editor.
 
 
-### Document Embedder Addon for Elementor Features
+### Key Features – Free Version
 
-- Doc Embedder addon to view the document. Also set Width, Height, and Alignment for the layout.
-- Word Viewer addon to view MS Word file. Set Height, Width, and alignment for the layout. Also, show the filename and download button on the top.
-- Excel Embedder addon to view the Excel file. Also set Width, Height, and Alignment for the layout.
-- Excel Viewer addon to view MS Excel file. Set Height, Width, and alignment for the layout. Also, show the filename and download button on the top.
-- PowerPoint Embedder addon to view the PowerPoint file. Also, configure the width, height, and alignment for the layout.
-- PowerPoint Viewer addon to view MS PowerPoint files. Set Height, Width, and alignment for the layout. Also, show the filename and download button on the top.
-- Google Docs addon to view Google Docs. Set Height, Width, and alignment for the layout. Also, show filename on the top.
-- Google Sheets addon to view Google Sheets. Set Height, Width, and alignment for the layout. Also, show the filename on the top.
-- Google Slides addon to view Google slides. Set Height, Width, and alignment for the layout. Also, show the filename on the top.
-- PDF Native Embedder addon to view PDF files. Set Height, Width, and alignment for the layout. Also, show the filename and download button on the top.
+Effortlessly embed documents with full layout customization:
 
-#### Document Embedder Addon for Elementor Pro Features
-- PDF Embedder addon to view PDF files. Also set Width, Height, and Alignment for the layout.
+- **Doc Embedder Widget** – Embed any general document file with width, height, and alignment settings
+
+- **Word Viewer Widget** – Display MS Word files with filename and optional download button
+
+- **Excel Embedder Widget** – Embed Excel files with full layout control
+
+- **Excel Viewer Widget** – View Excel files with a filename display and a download button
+
+- **PowerPoint Embedder Widget** – Show PowerPoint presentations with adjustable dimensions
+
+- **PowerPoint Viewer Widget** – View .PPT/.PPTX files, show the filename, and offer downloads
+
+- **Google Docs Embed Widget** – Embed Google Docs with title and alignment options
+
+- **Google Sheets Embed Widget** – Show Google Sheets files, adjust height/width, and show file title
+
+- **Google Slides Embed Widget** – Embed Google Slides presentations beautifully
+
+- **PDF Native Embedder Widget** – Display PDF files directly on your page with layout customization and optional download
+
+- **Adjustable Settings** – Set Width, Height, and Alignment for each widget to match your design perfectly
+
+- **Show Filename & Download Button** – Improve usability with optional file metadata
+
+
+### Pro Version – Unlock Premium Features
+Upgrade to the [**Pro version**](https://bplugins.com/products/document-embedder-addons-for-elementor/#pricing) for more advanced document handling and viewer customization.
+
+**What’s Included in Pro:**
+
+- **PDF Embedder Pro Widget** – Enhanced PDF display with custom dimensions and styling
+
+- More document control options and styling flexibility are coming soon!
+
+
+### Who Is This Plugin For?
+
+This Elementor addon is perfect for:
+
+- Businesses sharing proposals, contracts, or presentations
+
+- Educators embedding worksheets, slides, and assignments
+
+- Bloggers or writers showcasing downloadable templates
+
+- Course creators publishing lesson materials
+
+- Any Elementor user who wants to embed documents easily
+
+
+### How to Use – Step-by-Step Setup
+
+- Install and activate the Document Embedder Addon for Elementor plugin
+
+- Open your post or page in the Elementor editor panel.
+
+- Go to **B Addon** from the widgets library
+
+- Drag and drop a suitable document addon from the list
+
+- Upload your document and customize the settings
+
+- Hit the publish button
+
+That’s it.
+
+
+### Supported Document Types
+
+- Microsoft Word (.doc, .docx)
+
+- Microsoft Excel (.xls, .xlsx)
+
+- PowerPoint (.ppt, .pptx)
+
+- PDF files (.pdf)
+
+- Google Docs
+
+- Google Sheets
+
+- Google Slides
+
+Ready to enhance your Elementor pages with fully embedded documents?
+
+[**Live Demo**](https://bplugins.com/products/document-embedder-addons-for-elementor/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/document-embedder-addons-for-elementor/)
+
 
 ### User Feedback
 
@@ -64,22 +129,22 @@ Upgrade to the Pro version to unlock the PDF Embedder addon, which offers additi
 ***-[ketankpborada](https://wordpress.org/support/users/ketankpborada/)***
 
 
-
-#### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
-
+Liked this plugin? Hate it? Want a new feature? [**Send your feedback**](https://bplugins.com/support)
 
 
-= ⭐ Checkout our other WordPress Plugins- = 
+### Check out our other WordPress Plugins-
 
-🔥 **[Html5 Audio Player](https://audioplayerwp.com/)** – Best audio player plugin for WordPress.
+[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
-🔥 **[Html5 Video Player](https://wpvideoplayer.com/)** – Best video player plugin for WordPress.
+[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
 
-🔥 **[PDF Poster](http://pdfposter.com/)** – A fully-featured PDF Viewer Plugin for WordPresss.
+[**Html5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – Listen audios with awesome visuals.
 
-🔥 **[StreamCast](https://wordpress.org/plugins/streamcast)** – A fully-featured Radio Player Plugin for WordPresss.
+[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
 
-🔥 **[3D Viewer](https://3d-viewer.bplugins.com/)** – Display interactive 3D models on the webs.
+[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
+
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
 == Installation ==
@@ -93,16 +158,27 @@ e.g.
 
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 
+
+
+== Screenshots ==
+
+1. Addon List
+2. Document
+3. PDF Native
+4. MS Word
+5. MS Excel
+6. Google Docs
+7. Google Sheets
+8. Google Slides
+
 == Changelog ==
+
+= 1.0.4 =
+* Fixed: Security issue
+
 
 = 1.0.0 =
 * Initial Release
 
 = 1.0.1 10-10-2022 =
 * fixed: _register_controls is deprecated
-
-
-
-
-
-

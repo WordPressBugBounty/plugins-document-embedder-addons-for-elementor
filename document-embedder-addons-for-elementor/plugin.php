@@ -84,7 +84,7 @@ class Bae_BAddon {
 	 */
 	public function widget_styles(){
 
-		wp_register_style("bae-main",plugins_url("/admin/assets/css/main.css",__FILE__));
+		wp_register_style("bae-main",plugins_url("/admin/assets/css/main.css",__FILE__), [], '1.0.4');
 		wp_enqueue_style( 'bae-main' );
 	}
 	
