@@ -3,44 +3,42 @@ namespace BAddon\Widgets;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
+use BAddon\BAE\BAE_Common_Settings_Render;
 
 if ( !defined( 'ABSPATH' ) ) 
 	exit; 
 
 class bae_doc_embedder extends Widget_Base {
 
+	use BAE_Common_Settings_Render;
 	public function get_name() {
 		return 'bae-doc-embedder';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Doc Embedder', 'b-addon' );
+		return esc_html__( 'Doc Embedder', 'document-embedder-addons-for-elementor' );
 	}
 
 	public function get_icon() {
-		return 'bl_icon eicon-document-file';
+		return 'bl_icon far fa-file-word eicon-document-file';
 	}
 
 	public function get_categories() {
-		return [ 'b-addon' ];
+		return [ 'document-embedder-addons-for-elementor' ];
 	}
 
-	public function get_script_depends() {
-		return ['b-addon-script'];
-	}
-
-	protected function register_controls(){
+	protected function register_controls() {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Docs Content', 'b-addon' )
+				'label' => esc_html__( 'Docs Content', 'document-embedder-addons-for-elementor' )
 			]
 		);
 
 		$this->add_control(
 			'label_name',
 			[
-				'label' 		=> esc_html__( 'Source options', 'b-addon' ),
+				'label' 		=> esc_html__( 'Source options', 'document-embedder-addons-for-elementor' ),
 				'type' 			=> Controls_Manager::HEADING,
 				'separator' 	=> 'before',
 			]
@@ -49,10 +47,10 @@ class bae_doc_embedder extends Widget_Base {
 		$this->add_control(
 			'choose_source',
 			[
-				'label' 		=> __( 'Source Type', 'b-addon' ),
+				'label' 		=> __( 'Source Type', 'document-embedder-addons-for-elementor' ),
 				'type' 			=> Controls_Manager::SWITCHER,
-				'label_on' 		=> __( 'Link', 'b-addon' ),
-				'label_off' 	=> __( 'Upload', 'b-addon' ),
+				'label_on' 		=> __( 'Link', 'document-embedder-addons-for-elementor' ),
+				'label_off' 	=> __( 'Upload', 'document-embedder-addons-for-elementor' ),
 				'return_value' 	=> 'yes',
 				'default' 		=> '',
 			]
@@ -61,10 +59,11 @@ class bae_doc_embedder extends Widget_Base {
 		$this->add_control(
             'doc_file',
             [
-				'label' 		=> esc_html__( 'Upload Doc File', 'b-addon' ),
+				'label' 		=> esc_html__( 'Upload Doc File', 'document-embedder-addons-for-elementor' ),
 				'type' 			=> Controls_Manager::MEDIA,
-				'placeholder' 	=> esc_html__( 'Upload a word file here.', 'b-addon' ),
-				'media_type' 	=> 'application/pdf',
+				'placeholder' 	=> esc_html__( 'Upload a word file here.', 'document-embedder-addons-for-elementor' ),
+				'description' 	=> esc_html__( 'Upload a file on live server', 'document-embedder-addons-for-elementor' ),
+				'media_type' 	=> 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 				'dynamic' => [
 					'active' => true,
 				],
@@ -77,9 +76,10 @@ class bae_doc_embedder extends Widget_Base {
 		$this->add_control(
 			'doc_url',
 			[
-				'label' 		=> esc_html__( 'Doc URL', 'b-addon' ),
+				'label' 		=> esc_html__( 'Doc URL', 'document-embedder-addons-for-elementor' ),
 				'type' 			=> Controls_Manager::URL,
-				'placeholder' 	=> esc_html__( 'Paste a word file link here.', 'b-addon' ),
+				'placeholder' 	=> esc_html__( 'Paste a word file link here.', 'document-embedder-addons-for-elementor' ),
+				'description' 	=> esc_html__( 'Provide a link to a file from sharable server', 'document-embedder-addons-for-elementor' ),
 				'show_external' => true,
 				'default' => [
 					'is_external' 	=> true,
@@ -99,13 +99,13 @@ class bae_doc_embedder extends Widget_Base {
 		$this->start_controls_section(
             'section_content_setting',
             [
-                'label' => esc_html__( 'Doc Content Setting', 'b-addon' ),
+                'label' => esc_html__( 'Doc Content Setting', 'document-embedder-addons-for-elementor' ),
             ]
         );
 		$this->add_control(
 			'width',
 			[
-				'label' 		=> esc_html__( 'Width', 'b-addon' ),
+				'label' 		=> esc_html__( 'Width', 'document-embedder-addons-for-elementor' ),
 				'type' 			=> Controls_Manager::SLIDER,
 				'size_units' 	=> [ '%', 'px' ],
 				'range' 		=> 
@@ -133,7 +133,7 @@ class bae_doc_embedder extends Widget_Base {
 		$this->add_control(
 			'height',
 			[
-				'label' => esc_html__( 'Height', 'b-addon' ),
+				'label' => esc_html__( 'Height', 'document-embedder-addons-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ '%', 'px' ],
 				'range' => 
@@ -157,25 +157,24 @@ class bae_doc_embedder extends Widget_Base {
 				],
 			]
 		);
-
 		$this->add_control(
 			'text_align',
 			[
-				'label' 	=> esc_html__( 'Alignment', 'b-addon' ),
+				'label' 	=> esc_html__( 'Alignment', 'document-embedder-addons-for-elementor' ),
 				'type' 		=> Controls_Manager::CHOOSE,
 				'options' 	=> 
 				[
 					'flex-start' => [
-						'title' => esc_html__( 'Left', 'b-addon' ),
-						'icon' 	=> 'fa fa-align-left',
+						'title' => esc_html__( 'Left', 'document-embedder-addons-for-elementor' ),
+						'icon' 	=> 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'b-addon' ),
-						'icon' 	=> 'fa fa-align-center',
+						'title' => esc_html__( 'Center', 'document-embedder-addons-for-elementor' ),
+						'icon' 	=> 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => esc_html__( 'Right', 'b-addon' ),
-						'icon' 	=> 'fa fa-align-right',
+						'title' => esc_html__( 'Right', 'document-embedder-addons-for-elementor' ),
+						'icon' 	=> 'eicon-text-align-right',
 					],
 				],
 				'default' 	=> 'center',
@@ -185,9 +184,15 @@ class bae_doc_embedder extends Widget_Base {
 				'toggle' 	=> true,
 			]
 		);
-
 		$this->end_controls_section();
+
+		$this->render_common_style_settings();
 	}
+
+	public function render_common_style_settings() {
+		$this->bae_box_common_styles_render( $id = 'doc_viewer', $label = 'Doc Viewer', $condition = [], $selector = '.my-doc iframe' );
+	}
+
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		$doc_file = $settings['doc_file'];
@@ -199,16 +204,24 @@ class bae_doc_embedder extends Widget_Base {
 		}else{
 			$final_doc_link = isset($doc_file['url']) ? $doc_file['url'] : '';
 		}
-	if($final_doc_link ==''):?>
-	<center>
-	<h3><?php echo esc_html__('Paste the pdf file link from setting widget.','b-addon') ?></h3>
-   </center>
-	 <?php else: ?>
+
+		if(strpos($final_doc_link, 'drive.google.com')){
+			$source = str_replace('view', 'preview', $final_doc_link);
+		} else if(strpos($final_doc_link, 'docs.google.com')){
+			$source = str_replace('edit', 'preview', $final_doc_link);
+		}else {
+			$source = "https://docs.google.com/viewer?url=$final_doc_link?download=false&amp;embedded=true";
+		}
+
+
+	if($final_doc_link =='') { ?>
+		<h3><?php echo esc_html__('Paste the pdf file link from setting widget.','document-embedder-addons-for-elementor') ?></h3>
+	<?php } else { ?>
       <div class="my-doc">
-		<iframe src="https://docs.google.com/viewer?url=<?php echo esc_url($final_doc_link);?>&amp;embedded=true"  allowfullscreen>
+		<iframe src="<?php echo esc_url($source);?>&amp;embedded=true"  allowfullscreen>
 		</iframe>
-		</div>
-		<?php endif; 
+	</div>
+	<?php } 
 	       
 	}
 }

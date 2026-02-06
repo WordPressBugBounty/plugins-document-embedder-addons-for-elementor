@@ -2,7 +2,7 @@
 
 /*-------------------------------------------NEW FILE TYPES ALLOWED HERE-------------------------------------------*/
 //allow some additional file types for upload
-function bplugins_my_new_custom_mime_types( $mimes ) {
+function bplugins_my_new_custom_mime_types_pro( $mimes ) {
      
 	// New allowed mime types.
 	$mimes['pls'] = 'audio/x-scpls';
@@ -11,7 +11,7 @@ function bplugins_my_new_custom_mime_types( $mimes ) {
 
 return $mimes;
 }
-add_filter( 'upload_mimes', 'bplugins_my_new_custom_mime_types' );
+add_filter( 'upload_mimes', 'bplugins_my_new_custom_mime_types_pro' );
 
 
 // // Using in add_allow_upload_extension_exception function.
@@ -21,7 +21,7 @@ add_filter( 'upload_mimes', 'bplugins_my_new_custom_mime_types' );
 // add_filter( 'sanitize_file_name', 'wamt_remove_underscore', 10, 2 );
 
 
-function bplugins_add_allow_upload_extension_exception($data, $file, $filename,$mimes,$real_mime=null){
+function bplugins_add_allow_upload_extension_exception_pro($data, $file, $filename,$mimes,$real_mime=null){
 	// If file extension is 2 or more 
 	$f_sp = explode(".", $filename);
 	$f_exp_count  = count ($f_sp);
@@ -57,7 +57,7 @@ function bplugins_add_allow_upload_extension_exception($data, $file, $filename,$
 // It's different arguments between WordPress 5.1 and previous versions.
 global $wp_version;
 if ( version_compare( $wp_version, '5.1') >= 0):
-	add_filter( 'wp_check_filetype_and_ext', 'bplugins_add_allow_upload_extension_exception',10,5);
+	add_filter( 'wp_check_filetype_and_ext', 'bplugins_add_allow_upload_extension_exception_pro',10,5);
 else:
-	add_filter( 'wp_check_filetype_and_ext', 'bplugins_add_allow_upload_extension_exception',10,4);
+	add_filter( 'wp_check_filetype_and_ext', 'bplugins_add_allow_upload_extension_exception_pro',10,4);
 endif;
