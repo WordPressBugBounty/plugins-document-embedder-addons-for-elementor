@@ -6,7 +6,7 @@ Author URI: http://bplugins.com
 Plugin URI: https://bplugins.com/products/document-embedder-addons-for-elementor
 Contributors: abuhayat,bplugins, shehabulislam, hazrath, freemius
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
-Requires at least: 5.0
+Requires at least: 5.1
 Tested up to: 6.9
 Stable tag: 1.1.3
 Requires PHP: 7.1
