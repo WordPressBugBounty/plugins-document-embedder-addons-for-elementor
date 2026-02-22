@@ -63,7 +63,7 @@ class Bae_BAddon {
 		
 
 		//widgets
-		$active_widgets = (array) get_option( 'bptbGetBlocks', [] );
+		$active_widgets = (array) get_option( 'deafeGetWidgets', [] );
 
 		if ( !in_array( 'bae_pdf_embedder', $active_widgets, true ) ) {
 			require_once( __DIR__ . '/public/widgets/bae-pdf-embedder.php' );
@@ -107,12 +107,15 @@ class Bae_BAddon {
 		if ( !in_array( 'bae_sleek_pdf_viewer', $active_widgets, true ) ) {
 			require_once( __DIR__ . '/public/widgets/bae-sleek-pdf-viewer.php' );
 		}
-		if( bptbIsPremium()) {
+		if( deafeIsPremium()) {
 			if ( !in_array( 'bae_adobe_pdf_viewer', $active_widgets, true ) ) {
 				require_once( __DIR__ . '/public/widgets/bae-adobe-pdf-viewer.php' );
 			}
 			if ( !in_array( 'bae_document_library', $active_widgets, true ) ) {
 				require_once( __DIR__ . '/public/widgets/bae-document-library.php' );
+			}
+			if ( !in_array( 'bae_pdfjs_pdf_viewer', $active_widgets, true ) ) {
+				require_once( __DIR__ . '/public/widgets/bae-pdf-js-pdf-viewer.php' );
 			}
 		} else {
 			//load lock widget for non pro users
@@ -122,8 +125,8 @@ class Bae_BAddon {
 
 	//editor scripts
 	function editor_scripts() {
-		wp_register_style("ua-aa", plugins_url("/admin/assets/css/style.css",__FILE__));
-		wp_enqueue_style( 'ua-aa' );
+		wp_register_style("deafe-aa", plugins_url("/admin/assets/css/style.css",__FILE__));
+		wp_enqueue_style( 'deafe-aa' );
 	}
 	
 	/**
@@ -154,7 +157,7 @@ class Bae_BAddon {
 		$this->include_widgets_files();
 
 		// Register Widgets
-		$active_widgets = get_option( 'bptbGetBlocks', [] );
+		$active_widgets = get_option( 'deafeGetWidgets', [] );
 
 		if(empty($active_widgets)) {
 			$active_widgets = ['default_list'];
@@ -202,17 +205,22 @@ class Bae_BAddon {
 		if ( !in_array( 'bae_3d_flip_pdf_viewer', $active_widgets, true ) ) {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_3d_flip_pdf_viewer() );
 		}
-		if( bptbIsPremium() ) {
+		if( deafeIsPremium() ) {
 			if ( !in_array( 'bae_adobe_pdf_viewer', $active_widgets, true ) ) {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_adobe_pdf_viewer() );
 			}
 			if ( !in_array( 'bae_document_library', $active_widgets, true ) ) {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_document_library_Widget() );
 			}
+			if ( !in_array( 'bae_pdfjs_pdf_viewer', $active_widgets, true ) ) {
+				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_pdf_js_pdf_viewer() );
+			}
 		} else {
 			//register lock widget for non pro users
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Adobe PDF Viewer', 'adobe-viewer-placeholder', 'adobe-pdf-icon') );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Document Library', 'document-library-placeholder', 'document-library-icon') );
+			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Pdf.js PDF Viewer', 'pdf-js-viewer-placeholder', 'pdf-js-icon') );
+
 		}
 	}
 	

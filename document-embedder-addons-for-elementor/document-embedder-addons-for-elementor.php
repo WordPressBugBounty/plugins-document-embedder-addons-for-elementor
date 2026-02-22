@@ -4,9 +4,9 @@
  * Plugin Name: Document Embedder Addons for Elementor
  * Plugin URI:  https://wordpress.org/plugins
  * Description: You can easily Embed pdf, docs, xlsx, pptx files in wordress post, page, widget area and theme template file. 
- * Version:     1.1.3
- * Author:      bPlugins LLC
- * Author URI:  https://bplugins.com
+ * Version:     1.1.4
+ * Author:     	bPlugins LLC
+ * Author URI: 	https://bplugins.com
  * License:     GPLv3
  * Text Domain: document-embedder-addons-for-elementor
  * Domain Path: /languages
@@ -18,10 +18,10 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'deafe_fs' ) ) {
     deafe_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.3' ) );
-    define( 'BPTB_DIR_URL', plugin_dir_url( __FILE__ ) );
-    define( 'BPTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'BPTB_HAS_PRO', plugin_basename( __FILE__ ) === "document-embedder-addons-for-elementor-pro/document-embedder-addons-for-elementor.php" );
+    define( 'DEAFE_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.4' ) );
+    define( 'DEAFE_DIR_URL', plugin_dir_url( __FILE__ ) );
+    define( 'DEAFE_DIR_PATH', plugin_dir_path( __FILE__ ) );
+    define( 'DEAFE_HAS_PRO', plugin_basename( __FILE__ ) === "document-embedder-addons-for-elementor-pro/document-embedder-addons-for-elementor.php" );
     /**
      * DO NOT REMOVE THIS IF, IT IS ESSENTIAL FOR THE
      * `function_exists` CALL ABOVE TO PROPERLY WORK.
@@ -63,11 +63,11 @@ if ( function_exists( 'deafe_fs' ) ) {
     }
     // ... Your plugin's main file logic ...
     //
-    function bptbIsPremium() {
-        return ( BPTB_HAS_PRO ? deafe_fs()->can_use_premium_code() : false );
+    function deafeIsPremium() {
+        return ( DEAFE_HAS_PRO ? deafe_fs()->can_use_premium_code() : false );
     }
 
-    require_once 'BPTBAdminMenu.php';
+    require_once 'DEAFEAdminMenu.php';
     require_once 'enable-mime-type.php';
     require_once dirname( __FILE__ ) . '/public/helper/bae-common-settings-render.php';
     require_once 'freemius-extend/index.php';
@@ -85,7 +85,7 @@ if ( function_exists( 'deafe_fs' ) ) {
          * @since 1.2.0
          * @var string The plugin version.
          */
-        const VERSION = '1.1.3';
+        const VERSION = '1.1.4';
 
         /**
          * Minimum Elementor Version

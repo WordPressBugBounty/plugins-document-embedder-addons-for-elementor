@@ -1,14 +1,14 @@
 === Document Embedder Addons for Elementor – Embed Documents in Elementor Websites ===
 Plugin Name: Document Embedder Addons For Elementor
-Version: 1.1.3
+Version: 1.1.4
 Author: bplugins, abuhayat, shehabulislam
 Author URI: http://bplugins.com
 Plugin URI: https://bplugins.com/products/document-embedder-addons-for-elementor
 Contributors: abuhayat,bplugins, shehabulislam, hazrath, freemius
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
-Requires at least: 5.1
+Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -18,7 +18,7 @@ Document Embedder Addons for Elementor makes it simple to embed PDFs, Word docs,
 
 == Description ==
 
-Easily share important documents on your website without redirecting visitors elsewhere. [Document Embedder Addons for Elementor](https://bplugins.com/products/document-embedder-addons-for-elementor/) gives you 15 ready-to-use widgets that display PDFs, Word files, spreadsheets, presentations, Google Docs, Google Sheets, Google Slides, and more directly in your pages. Just drag and drop any file from your media library, tweak the size and style, and watch it fit perfectly into your design.
+Easily share important documents on your website without redirecting visitors elsewhere. [Document Embedder Addons for Elementor](https://bplugins.com/products/document-embedder-addons-for-elementor/) gives you 16 ready-to-use widgets that display PDFs, Word files, spreadsheets, presentations, Google Docs, Google Sheets, Google Slides, and more directly in your pages. Just drag and drop any file from your media library, tweak the size and style, and watch it fit perfectly into your design.
 
 Perfect for businesses sharing contracts, teachers displaying worksheets, or course creators embedding lesson materials—this addon keeps users engaged on your site with smooth, responsive viewing. No coding required, and everything works beautifully on mobile devices too.
 
@@ -54,6 +54,7 @@ https://www.youtube.com/watch?v=OtJayJ8N-5c
 - **3D Flip PDF Viewer**: Create an interactive flipbook effect for PDFs with a page-turning experience.
 - **Adobe PDF Viewer(Pro)**: A reliable, feature-rich PDF viewer powered by Adobe's PDF engine.
 - **Document Library(Pro)**: Organize and manage all your embedded documents in one centralized location with easy access and quick reusable uploads.
+- **Pdf.js PDF Viewer(Pro)**: Display your PDF in premium look with the pdf.js library.
 
 === Key Features ===
 
@@ -167,6 +168,10 @@ Our dedicated support team is ready to help! Please submit your questions or iss
 
 == Changelog ==
 
+= 1.1.4 22-Feb-26 =
+* Release: New Widget( Pdf.js PDF Viewer),
+* Fixed: Refactor code,
+
 = 1.1.3 26-Jan-26 =
 * Release: New Widget( Document Library),
 * Update: New Features Show/Hide Preview Button,
@@ -196,10 +201,3 @@ Our dedicated support team is ready to help! Please submit your questions or iss
 
 = 1.0.0 =
 * Initial Release
-
-== Upgrade Notice == 
-
-= 1.1.3 26-Jan-26 =
-* Release: New Widget( Document Library),
-* Update: New Features Show/Hide Preview Button,
-* Update: New Features Show/Hide Download Button,
