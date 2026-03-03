@@ -4,7 +4,7 @@
  * Plugin Name: Document Embedder Addons for Elementor
  * Plugin URI:  https://wordpress.org/plugins
  * Description: You can easily Embed pdf, docs, xlsx, pptx files in wordress post, page, widget area and theme template file. 
- * Version:     1.1.4
+ * Version:     1.1.5
  * Author:     	bPlugins LLC
  * Author URI: 	https://bplugins.com
  * License:     GPLv3
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'deafe_fs' ) ) {
     deafe_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'DEAFE_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.4' ) );
+    define( 'DEAFE_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.5' ) );
     define( 'DEAFE_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'DEAFE_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'DEAFE_HAS_PRO', plugin_basename( __FILE__ ) === "document-embedder-addons-for-elementor-pro/document-embedder-addons-for-elementor.php" );
@@ -68,6 +68,9 @@ if ( function_exists( 'deafe_fs' ) ) {
     }
 
     require_once 'DEAFEAdminMenu.php';
+    if ( DEAFE_HAS_PRO ) {
+        require_once 'public/helper/LicenseActivation.php';
+    }
     require_once 'enable-mime-type.php';
     require_once dirname( __FILE__ ) . '/public/helper/bae-common-settings-render.php';
     require_once 'freemius-extend/index.php';
@@ -85,7 +88,7 @@ if ( function_exists( 'deafe_fs' ) ) {
          * @since 1.2.0
          * @var string The plugin version.
          */
-        const VERSION = '1.1.4';
+        const VERSION = '1.1.5';
 
         /**
          * Minimum Elementor Version

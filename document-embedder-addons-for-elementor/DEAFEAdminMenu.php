@@ -19,6 +19,13 @@ if(!class_exists("DEAFEAdminMenu")) {
 						height: 20px !important;
 						object-fit: contain;
 					}
+					.fs-submenu-item.document-embedder-addons-for-elementor.pricing.upgrade-mode {
+						background: #146ef5;
+						border-radius: 3px;
+						color: #fff;
+						display: inline-block;
+						padding: 9px 20px 9px 18px;
+					}
 				</style>';
 		}
 	
@@ -72,7 +79,10 @@ if(!class_exists("DEAFEAdminMenu")) {
 				data-info='<?php echo esc_attr( wp_json_encode( [
 					'version' => DEAFE_VERSION,
 					'nonce' => wp_create_nonce( 'deafe_admin_nonce' ),
+					'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
 					'isPremium' => deafeIsPremium(),
+					'hasPro' => DEAFE_HAS_PRO,
+					'action' => 'deafeGetBlocks',
 					'pricingUrl' => admin_url( 'admin.php?page=document-embedder-addons-for-elementor#/pricing' ),
 				] ) ); ?>'
 			></div>
