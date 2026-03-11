@@ -101,9 +101,6 @@ class Bae_BAddon {
 		if ( !in_array( 'bae_google_slides', $active_widgets, true ) ) {
 			require_once( __DIR__ . '/public/widgets/bae-google-slides.php' );
 		}
-		if ( !in_array( 'bae_3d_flip_pdf_viewer', $active_widgets, true ) ) {
-			require_once( __DIR__ . '/public/widgets/bae-3d-flip-pdf-viewer.php' );
-		}
 		if ( !in_array( 'bae_sleek_pdf_viewer', $active_widgets, true ) ) {
 			require_once( __DIR__ . '/public/widgets/bae-sleek-pdf-viewer.php' );
 		}
@@ -116,6 +113,9 @@ class Bae_BAddon {
 			}
 			if ( !in_array( 'bae_pdfjs_pdf_viewer', $active_widgets, true ) ) {
 				require_once( __DIR__ . '/public/widgets/bae-pdf-js-pdf-viewer.php' );
+			}
+			if ( !in_array( 'bae_flip_book_pdf_viewer', $active_widgets, true ) ) {
+				require_once( __DIR__ . '/public/widgets/bae-flip-book-pdf-viewer.php' );
 			}
 		} else {
 			//load lock widget for non pro users
@@ -202,9 +202,6 @@ class Bae_BAddon {
 		if ( !in_array( 'bae_sleek_pdf_viewer', $active_widgets, true ) ) {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_sleek_pdf_viewer() );
 		}
-		if ( !in_array( 'bae_3d_flip_pdf_viewer', $active_widgets, true ) ) {
-			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_3d_flip_pdf_viewer() );
-		}
 		if( deafeIsPremium() ) {
 			if ( !in_array( 'bae_adobe_pdf_viewer', $active_widgets, true ) ) {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_adobe_pdf_viewer() );
@@ -215,11 +212,15 @@ class Bae_BAddon {
 			if ( !in_array( 'bae_pdfjs_pdf_viewer', $active_widgets, true ) ) {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_pdf_js_pdf_viewer() );
 			}
+			if ( !in_array( 'bae_flip_book_pdf_viewer', $active_widgets, true ) ) {
+				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_flip_book_pdf_viewer() );
+			}
 		} else {
 			//register lock widget for non pro users
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Adobe PDF Viewer', 'adobe-viewer-placeholder', 'adobe-pdf-icon') );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Document Library', 'document-library-placeholder', 'document-library-icon') );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Pdf.js PDF Viewer', 'pdf-js-viewer-placeholder', 'pdf-js-icon') );
+			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Flip Book PDF Viewer', 'flip-book-pdf-viewer-placeholder', 'flip-book-pdf-viewer') );
 
 		}
 	}
@@ -265,29 +266,55 @@ class Bae_BAddon {
 		add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'editor_scripts' ] );
 		add_action('elementor/frontend/after_enqueue_scripts', [ $this, 'enqueue_dearflip_via_cdn' ]);
 		add_action('elementor/editor/after_enqueue_scripts', [ $this, 'enqueue_dearflip_via_cdn' ]);
+		add_action('elementor/frontend/after_enqueue_styles', [ $this, 'enqueue_dearflip_style' ]);
+		add_action('elementor/editor/after_enqueue_styles', [ $this, 'enqueue_dearflip_style' ]);
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'register_lock_script' ] );
 
 	}
 
 	public function register_lock_script() {
 		wp_enqueue_script(
-			'dae-locked-widget-admin-lock',
+			'deafe-locked-widget-admin-lock',
 			plugin_dir_url( __FILE__ ) . 'admin/assets/js/admin-lock.js',
 			['jquery'],
 			'1.0.0',
 			true
 		);
-		wp_localize_script( 'dae-locked-widget-admin-lock', 'MyLockedWidget', [
+		wp_localize_script( 'deafe-locked-widget-admin-lock', 'MyLockedWidget', [
 			'upgradeUrl' => admin_url( 'admin.php?page=document-embedder-addons-for-elementor#/pricing' ),
 			'widgetName' => 'Document Embedder Addons Pro',
 		] );
 	}
 
 	public function enqueue_dearflip_via_cdn() {
-		wp_enqueue_script( 'dearflip-js', 'https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/js/dflip.min.js', array('elementor-frontend'), '1.7.3', true );
-		wp_enqueue_script( 'main-script', plugin_dir_url( __FILE__ ) . 'admin/assets/js/main.js', array('jquery', 'dearflip-js', 'elementor-frontend'), '1.0', true );
-		wp_enqueue_style( 'dearflip-css', 'https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/css/dflip.min.css', array(), '1.7.3' );
+		wp_enqueue_script(
+			'dae-dflip-script',
+			plugin_dir_url( __FILE__ ) . 'admin/vendor/dflip/js/dflip.min.js',
+			['jquery'],
+			'1.7.36',
+			true
+		);
+		
 	}
+
+	public function enqueue_dearflip_style() {
+		wp_enqueue_style(
+			'dae-dflip-css',
+			plugin_dir_url( __FILE__ ) . 'admin/vendor/dflip/css/dflip.min.css',
+			[],
+			'1.7.36',
+			false
+		);
+
+		wp_enqueue_style(
+			'dae-dflip-themify-css',
+			plugin_dir_url( __FILE__ ) . 'admin/vendor/dflip/css/themify-icons.min.css',
+			[],
+			'1.7.36',
+			false
+		);
+	}
+	
 }
 
 // Instantiate Plugin Class

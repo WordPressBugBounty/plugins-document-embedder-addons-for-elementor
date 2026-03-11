@@ -14609,12 +14609,6 @@ const docsURL = `https://bplugins.com/docs/document-embedder-addons-for-elemento
   demo: `${demoLink}/sleek-pdf-viewer/`,
   docs: `${docsURL}`
 }, {
-  name: `bae_3d_flip_pdf_viewer`,
-  title: '3D Flip PDF Viewer',
-  icon: _blocksIcon__WEBPACK_IMPORTED_MODULE_0__.flip3dpdfViewer,
-  demo: `${demoLink}/flip-3d-pdf-viewer/`,
-  docs: `${docsURL}`
-}, {
   name: `bae_adobe_pdf_viewer`,
   title: 'Adobe PDF Viewer',
   icon: _blocksIcon__WEBPACK_IMPORTED_MODULE_0__.adobepdfViewerIcon,
@@ -14633,6 +14627,13 @@ const docsURL = `https://bplugins.com/docs/document-embedder-addons-for-elemento
   title: 'Pdf.js PDF Viewer',
   icon: _blocksIcon__WEBPACK_IMPORTED_MODULE_0__.pdfjsPdfViewerIcon,
   demo: `${demoLink}/pdf-js-pdf-viewer/`,
+  docs: `${docsURL}`,
+  isPremium: true
+}, {
+  name: `bae_flip_book_pdf_viewer`,
+  title: 'Flip Book PDF Viewer',
+  icon: _blocksIcon__WEBPACK_IMPORTED_MODULE_0__.flipBookPDFViewer,
+  demo: `${demoLink}/flip-3d-pdf-viewer/`,
   docs: `${docsURL}`,
   isPremium: true
 }]);
@@ -14654,6 +14655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   excelEmbedderIcon: () => (/* binding */ excelEmbedderIcon),
 /* harmony export */   excelViewerIcon: () => (/* binding */ excelViewerIcon),
 /* harmony export */   flip3dpdfViewer: () => (/* binding */ flip3dpdfViewer),
+/* harmony export */   flipBookPDFViewer: () => (/* binding */ flipBookPDFViewer),
 /* harmony export */   googleDocViewerIcon: () => (/* binding */ googleDocViewerIcon),
 /* harmony export */   googleSheetViewerIcon: () => (/* binding */ googleSheetViewerIcon),
 /* harmony export */   googleSlideViewerIcon: () => (/* binding */ googleSlideViewerIcon),
@@ -14897,6 +14899,30 @@ const pdfjsPdfViewerIcon = (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(
 }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
   d: "M5.8 14H5v1h.8c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zM11 2H3v16h13V7l-5-5zM7.2 14.6c0 .8-.6 1.4-1.4 1.4H5v1H4v-4h1.8c.8 0 1.4.6 1.4 1.4v.2zm4.1.5c0 1-.8 1.9-1.9 1.9H8v-4h1.4c1 0 1.9.8 1.9 1.9v.2zM15 14h-2v1h1.5v1H13v1h-1v-4h3v1zm0-2H4V3h7v4h4v5zm-5.6 2H9v2h.4c.6 0 1-.4 1-1s-.5-1-1-1z"
 })));
+const flipBookPDFViewer = (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  id: "SVGRepo_bgCarrier",
+  strokeWidth: "0"
+}), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  id: "SVGRepo_tracerCarrier",
+  strokeLinecap: "round",
+  strokeLinejoin: "round"
+}), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  id: "SVGRepo_iconCarrier"
+}, " ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  opacity: "0.4",
+  d: "M16.1898 2H7.81976C4.17976 2 2.00977 4.17 2.00977 7.81V16.18C2.00977 19.82 4.17976 21.99 7.81976 21.99H16.1898C19.8298 21.99 21.9998 19.82 21.9998 16.18V7.81C21.9998 4.17 19.8298 2 16.1898 2Z",
+  fill: "#292D32"
+}), " ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "M11.4991 8.09V17.25C11.4991 17.61 11.1391 17.85 10.8091 17.71C9.59914 17.19 8.01913 16.71 6.91913 16.57L6.72913 16.55C6.11913 16.47 5.61914 15.9 5.61914 15.28V7.57999C5.61914 6.81999 6.23915 6.25 6.99915 6.31C8.24915 6.41 10.0992 7.01001 11.2592 7.67001C11.4092 7.74001 11.4991 7.91 11.4991 8.09Z",
+  fill: "#292D32"
+}), " ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "M18.38 7.69983V15.2698C18.38 15.8898 17.88 16.4598 17.27 16.5398L17.06 16.5598C15.97 16.7098 14.4 17.1798 13.19 17.6898C12.86 17.8298 12.5 17.5898 12.5 17.2298V8.0798C12.5 7.8998 12.59 7.72983 12.75 7.63983C13.91 6.98983 15.72 6.4098 16.95 6.2998H16.99C17.76 6.3098 18.38 6.92983 18.38 7.69983Z",
+  fill: "#292D32"
+}), " "));
 
 /***/ }),
 
@@ -14959,6 +14985,10 @@ const dashboardInfo = info => {
     },
     proFeatures: ['Adobe PDF Viewer: A reliable, feature-rich PDF viewer powered by Adobe’s PDF engine.', 'Document Library: Organize and manage all your embedded documents in one centralized location with easy access and quick reusable upload', 'Pdf.js PDF Viewer: Display your PDF in premium look with the pdf.js library', 'Search functionality within Adobe PDF embedded documents.', 'Allow users to highlight and annotate documents.', 'Add watermarks to embedded documents for branding and security.', 'Add content protection features to prevent unauthorized downloading or copying of embedded documents.', 'Centralized hub to organize and manage all your embedded documents.', 'Lightbox display option for a more immersive viewing experience.', 'Priority support for any issues or questions related to the plugin.'],
     changelogs: [{
+      version: '1.1.6 10-Mar-26',
+      type: 'new',
+      list: ['Release: New Widget( Flip Book PDF Viewer),']
+    }, {
       version: '1.1.5 03-Mar-26',
       type: 'update',
       list: ['Update: Add new admin dashboard']
@@ -15024,6 +15054,22 @@ const demoInfo = {
       title: 'Lightbox',
       type: 'iframe',
       url: 'https://elementor.bplugins.com/demo/adobe-pdf-viewer-lightbox/'
+    }]
+  }, {
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M16.1898 2H7.81976C4.17976 2 2.00977 4.17 2.00977 7.81V16.18C2.00977 19.82 4.17976 21.99 7.81976 21.99H16.1898C19.8298 21.99 21.9998 19.82 21.9998 16.18V7.81C21.9998 4.17 19.8298 2 16.1898 2Z" fill="#292D32"></path> <path d="M11.4991 8.09V17.25C11.4991 17.61 11.1391 17.85 10.8091 17.71C9.59914 17.19 8.01913 16.71 6.91913 16.57L6.72913 16.55C6.11913 16.47 5.61914 15.9 5.61914 15.28V7.57999C5.61914 6.81999 6.23915 6.25 6.99915 6.31C8.24915 6.41 10.0992 7.01001 11.2592 7.67001C11.4092 7.74001 11.4991 7.91 11.4991 8.09Z" fill="#292D32"></path> <path d="M18.38 7.69983V15.2698C18.38 15.8898 17.88 16.4598 17.27 16.5398L17.06 16.5598C15.97 16.7098 14.4 17.1798 13.19 17.6898C12.86 17.8298 12.5 17.5898 12.5 17.2298V8.0798C12.5 7.8998 12.59 7.72983 12.75 7.63983C13.91 6.98983 15.72 6.4098 16.95 6.2998H16.99C17.76 6.3098 18.38 6.92983 18.38 7.69983Z" fill="#292D32"></path> </g></svg>',
+    title: 'Flip Book PDF Viewer',
+    children: [{
+      title: 'Default',
+      type: 'iframe',
+      url: 'https://elementor.bplugins.com/demo/flip-book-pdf-viewer-default/'
+    }, {
+      title: 'Thumbnail',
+      type: 'iframe',
+      url: 'https://elementor.bplugins.com/demo/flip-book-pdf-viewer-thumbnail/'
+    }, {
+      title: 'Lightbox',
+      type: 'iframe',
+      url: 'https://elementor.bplugins.com/demo/flip-book-pdf-viewer-lightbox/'
     }]
   }, {
     icon: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#ECEDEF;" d="M106.324,8.017c-9.446,0-17.102,7.656-17.102,17.102v461.762c0,9.446,7.656,17.102,17.102,17.102 h376.251c9.446,0,17.102-7.656,17.102-17.102V84.977l-76.96-76.96H106.324z"></path> <path style="fill:#D9DCDF;" d="M439.819,84.977h59.858l-76.96-76.96v59.858C422.716,77.319,430.373,84.977,439.819,84.977z"></path> <path style="fill:#C6CACF;" d="M397.063,196.142H89.222V42.221h307.841c4.722,0,8.551,3.829,8.551,8.551v136.818 C405.614,192.313,401.785,196.142,397.063,196.142z"></path> <polygon style="fill:#68727E;" points="388.512,179.04 12.261,179.04 80.67,110.63 12.261,42.221 388.512,42.221 "></polygon> <path style="fill:#D9DCDF;" d="M414.165,461.228H174.733c-4.722,0-8.551-3.829-8.551-8.551v-222.33c0-4.722,3.829-8.551,8.551-8.551 h239.432c4.722,0,8.551,3.829,8.551,8.551v222.33C422.716,457.399,418.888,461.228,414.165,461.228z"></path> <path style="fill:#C6CACF;" d="M183.284,444.125v-222.33h-8.551c-4.722,0-8.551,3.829-8.551,8.551v222.33 c0,4.722,3.829,8.551,8.551,8.551h239.432c4.722,0,8.551-3.829,8.551-8.551v-8.551H183.284z"></path> <rect x="302.999" y="324.409" style="fill:#DB6B5E;" width="85.511" height="102.614"></rect> <rect x="320.101" y="341.511" style="fill:#FF8C78;" width="51.307" height="68.409"></rect> <path d="M499.677,426.489c4.428,0,8.017-3.589,8.017-8.017V84.977c0-2.1-0.862-4.183-2.347-5.668l-76.96-76.96 C426.9,0.863,424.817,0,422.716,0H106.324C92.473,0,81.205,11.268,81.205,25.119v9.086H12.261c-6.987,0-10.616,8.738-5.668,13.685 l62.74,62.741l-62.74,62.741c-4.947,4.947-1.32,13.685,5.668,13.685h68.944v299.825c0,13.851,11.268,25.119,25.119,25.119h376.251 c13.851,0,25.119-11.268,25.119-25.119v-34.205c0-4.427-3.588-8.017-8.017-8.017c-4.428,0-8.017,3.589-8.017,8.017v34.205 c0,5.01-4.076,9.086-9.086,9.086H106.324c-5.01,0-9.086-4.076-9.086-9.086V187.056h51.841c4.427,0,8.017-3.589,8.017-8.017 s-3.589-8.017-8.017-8.017H31.615l54.724-54.724c3.131-3.131,3.131-8.207,0-11.337L31.615,50.238h348.88v120.785H183.284 c-4.427,0-8.017,3.589-8.017,8.017s3.589,8.017,8.017,8.017h205.228c4.428,0,8.017-3.589,8.017-8.017V42.221 c0-4.427-3.588-8.017-8.017-8.017H97.238v-9.086c0-5.01,4.076-9.086,9.086-9.086H414.7v51.841c0,13.851,11.268,25.119,25.119,25.119 h51.841v325.478C491.66,422.9,495.248,426.489,499.677,426.489z M439.819,76.96c-5.01,0-9.086-4.076-9.086-9.086V27.37l49.589,49.59 H439.819z"></path> <path d="M182.75,136.284v-17.655c0.177,0.012,0.355,0.018,0.534,0.018h25.653c4.427,0,8.017-3.589,8.017-8.017V84.977 c0-4.427-3.589-8.017-8.017-8.017h-34.205c-4.427,0-8.017,3.589-8.017,8.017v51.307c0,4.427,3.589,8.017,8.017,8.017 S182.75,140.711,182.75,136.284z M182.75,92.994h18.171v9.62h-17.637c-0.18,0-0.357,0.005-0.534,0.018V92.994z"></path> <path d="M268.796,144.301c4.428,0,8.017-3.589,8.017-8.017v-34.205c0-13.851-11.268-25.119-25.119-25.119h-17.102 c-4.427,0-8.017,3.589-8.017,8.017v51.307c0,4.427,3.589,8.017,8.017,8.017H268.796z M242.608,92.994h9.086 c5.01,0,9.086,4.076,9.086,9.086v26.188h-18.171V92.994z"></path> <path d="M328.654,92.994c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-34.205 c-4.428,0-8.017,3.589-8.017,8.017v51.307c0,4.427,3.588,8.017,8.017,8.017s8.017-3.589,8.017-8.017v-17.637h17.637 c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-17.637v-9.62H328.654z"></path> <path d="M158.165,230.347v222.33c0,9.136,7.432,16.568,16.568,16.568h239.432c9.136,0,16.568-7.432,16.568-16.568v-222.33 c0-9.136-7.432-16.568-16.568-16.568H174.733C165.597,213.779,158.165,221.211,158.165,230.347z M174.199,230.347 c0-0.295,0.239-0.534,0.534-0.534h239.432c0.294,0,0.534,0.239,0.534,0.534v222.33c0,0.295-0.241,0.534-0.534,0.534H174.733 c-0.295,0-0.534-0.239-0.534-0.534L174.199,230.347L174.199,230.347z"></path> <path d="M303,435.04h85.511c4.428,0,8.017-3.589,8.017-8.017V324.409c0-4.427-3.588-8.017-8.017-8.017H303 c-4.428,0-8.017,3.589-8.017,8.017v102.614C294.984,431.45,298.572,435.04,303,435.04z M311.017,332.426h69.478v86.58h-69.478 V332.426z"></path> <path d="M303,264.017h94.063c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017H303 c-4.428,0-8.017,3.589-8.017,8.017C294.984,260.427,298.572,264.017,303,264.017z"></path> <path d="M303,298.221h94.063c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017H303 c-4.428,0-8.017,3.589-8.017,8.017C294.984,294.632,298.572,298.221,303,298.221z"></path> <path d="M191.835,264.017h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,260.427,187.408,264.017,191.835,264.017z"></path> <path d="M191.835,298.221h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,294.632,187.408,298.221,191.835,298.221z"></path> <path d="M191.835,332.426h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,328.837,187.408,332.426,191.835,332.426z"></path> <path d="M191.835,366.63h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,363.041,187.408,366.63,191.835,366.63z"></path> <path d="M191.835,400.835h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,397.246,187.408,400.835,191.835,400.835z"></path> <path d="M191.835,435.04h85.512c4.428,0,8.017-3.589,8.017-8.017c0-4.427-3.588-8.017-8.017-8.017h-85.511 c-4.427,0-8.017,3.589-8.017,8.017C183.819,431.45,187.408,435.04,191.835,435.04z"></path> </g></svg>',

@@ -23,7 +23,7 @@ trait BAE_Common_Settings_Render {
         $this->start_controls_section(
 			'section_'. $id .'_style',
 			[
-				'label' => esc_html__( 'File Name', 'document-embedder-addons-for-elementor' ),
+				'label' => esc_html__( $label, 'document-embedder-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => $condition
 			]
@@ -84,7 +84,7 @@ trait BAE_Common_Settings_Render {
         $this->start_controls_section(
 			'section_'. $id .'_style',
 			[
-				'label' => esc_html__( 'Download Button', 'document-embedder-addons-for-elementor' ),
+				'label' => esc_html__( $label, 'document-embedder-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => $condition
 			]
@@ -252,7 +252,7 @@ trait BAE_Common_Settings_Render {
         $this->start_controls_section(
             'section_'. $id .'_style',
             [
-                'label'     => esc_html__( 'Viwer Layout', 'document-embedder-addons-for-elementor' ),
+                'label'     => esc_html__( $label, 'document-embedder-addons-for-elementor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => $condition,
             ]
