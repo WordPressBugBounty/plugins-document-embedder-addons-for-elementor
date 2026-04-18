@@ -458,3 +458,40 @@
     border: none;
     object-fit: contain;
 }
+
+.pdf-js-button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.pdf-js-button-wrapper .download-button {
+    background: #10b981;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.pdf-js-button-wrapper .download-button:hover {
+    background: #059669;
+}
+
+.pdf-js-button-wrapper .preview-button {
+    background: #113428;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.pdf-js-button-wrapper .preview-button:hover {
+    background: #0d3b2c;
+}

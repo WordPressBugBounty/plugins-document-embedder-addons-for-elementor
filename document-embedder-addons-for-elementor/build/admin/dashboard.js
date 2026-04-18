@@ -14985,9 +14985,13 @@ const dashboardInfo = info => {
     },
     proFeatures: ['Adobe PDF Viewer: A reliable, feature-rich PDF viewer powered by Adobe’s PDF engine.', 'Document Library: Organize and manage all your embedded documents in one centralized location with easy access and quick reusable upload', 'Pdf.js PDF Viewer: Display your PDF in premium look with the pdf.js library', 'Search functionality within Adobe PDF embedded documents.', 'Allow users to highlight and annotate documents.', 'Add watermarks to embedded documents for branding and security.', 'Add content protection features to prevent unauthorized downloading or copying of embedded documents.', 'Centralized hub to organize and manage all your embedded documents.', 'Lightbox display option for a more immersive viewing experience.', 'Priority support for any issues or questions related to the plugin.'],
     changelogs: [{
+      version: '1.1.7 18-Apr-26',
+      type: 'fix',
+      list: ['Fixed: PHP Fatal error on elementor editor']
+    }, {
       version: '1.1.6 10-Mar-26',
       type: 'new',
-      list: ['Release: New Widget( Flip Book PDF Viewer),']
+      list: ['Release: New Widget( Flip Book PDF Viewer)']
     }, {
       version: '1.1.5 03-Mar-26',
       type: 'update',

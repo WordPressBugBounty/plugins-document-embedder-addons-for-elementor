@@ -207,7 +207,7 @@ class Bae_BAddon {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_adobe_pdf_viewer() );
 			}
 			if ( !in_array( 'bae_document_library', $active_widgets, true ) ) {
-				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_document_library_Widget() );
+				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_document_library() );
 			}
 			if ( !in_array( 'bae_pdfjs_pdf_viewer', $active_widgets, true ) ) {
 				\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\bae_pdf_js_pdf_viewer() );
@@ -221,7 +221,6 @@ class Bae_BAddon {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Document Library', 'document-library-placeholder', 'document-library-icon') );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Pdf.js PDF Viewer', 'pdf-js-viewer-placeholder', 'pdf-js-icon') );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\My_Lock_Widget('Flip Book PDF Viewer', 'flip-book-pdf-viewer-placeholder', 'flip-book-pdf-viewer') );
-
 		}
 	}
 	

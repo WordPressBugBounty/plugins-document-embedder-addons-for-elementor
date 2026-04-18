@@ -4,7 +4,7 @@
  * Plugin Name: Document Embedder Addons for Elementor
  * Plugin URI:  https://wordpress.org/plugins
  * Description: You can easily Embed pdf, docs, xlsx, pptx files in wordress post, page, widget area and theme template file. 
- * Version:     1.1.6
+ * Version:     1.1.7
  * Author:     	bPlugins LLC
  * Author URI: 	https://bplugins.com
  * License:     GPLv3
