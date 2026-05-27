@@ -1,9 +1,9 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-if(class_exists('BPlugins_Controls_Register')) exit;
+if(class_exists('DEAFE_Controls_Register')) exit;
 
-final class BPlugins_Controls_Register {
+final class DEAFE_Controls_Register {
 
 	/**
 	 * Plugin Version
@@ -92,7 +92,7 @@ final class BPlugins_Controls_Register {
 	 */
 	public function i18n() {
 
-		load_plugin_textdomain( 'document-embedder-addons-for-elementor' );
+		//load_plugin_textdomain( 'document-embedder-addons-for-elementor' );
 
 	}
 
@@ -147,8 +147,12 @@ final class BPlugins_Controls_Register {
 	 * @access public
 	 */
 	public function admin_notice_missing_main_plugin() {
-
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if (
+			isset( $_GET['activate'], $_GET['_wpnonce'] ) &&
+			wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ), 'activate-plugin_action' )
+		) {
+			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 		/* translators: 1: Plugin name 2: Elementor */
@@ -157,7 +161,7 @@ final class BPlugins_Controls_Register {
 			'<strong>' . esc_html__( 'Elementor', 'document-embedder-addons-for-elementor' ) . '</strong>'
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', esc_html($message));
 
 	}
 
@@ -171,8 +175,12 @@ final class BPlugins_Controls_Register {
 	 * @access public
 	 */
 	public function admin_notice_minimum_elementor_version() {
-
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if (
+			isset( $_GET['activate'], $_GET['_wpnonce'] ) &&
+			wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ), 'activate-plugin_action' )
+		) {
+			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 		/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
@@ -182,7 +190,7 @@ final class BPlugins_Controls_Register {
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', esc_html($message));
 
 	}
 
@@ -196,8 +204,12 @@ final class BPlugins_Controls_Register {
 	 * @access public
 	 */
 	public function admin_notice_minimum_php_version() {
-
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if (
+			isset( $_GET['activate'], $_GET['_wpnonce'] ) &&
+			wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ), 'activate-plugin_action' )
+		) {
+			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 		/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
@@ -207,7 +219,7 @@ final class BPlugins_Controls_Register {
 			self::MINIMUM_PHP_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', esc_html($message));
 
 	}
 
@@ -242,12 +254,12 @@ final class BPlugins_Controls_Register {
 	public function init_controls() {
 
 		// Include Widget files
-		require_once( __DIR__ . '/b-select-file.php' );
+		require_once( __DIR__ . '/deafe-select-file.php' );
 
 		// Register controls
-		\Elementor\Plugin::$instance->controls_manager->register_control( 'b-select-file', new \BPlugins_B_Select_File() );
+		\Elementor\Plugin::$instance->controls_manager->register_control( 'deafe-select-file', new \BPlugins_B_Select_File() );
 	}
 
 }
 
-BPlugins_Controls_Register::instance();
+DEAFE_Controls_Register::instance();

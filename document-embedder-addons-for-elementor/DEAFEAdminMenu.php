@@ -40,7 +40,7 @@ if(!class_exists("DEAFEAdminMenu")) {
 				'document-embedder-addons-for-elementor',
 				'',
 				$menu_icon,
-				20
+				66
 			);
 	
 			add_submenu_page(
@@ -55,13 +55,22 @@ if(!class_exists("DEAFEAdminMenu")) {
 		}
 
 		public function deafeGetBlocks(){
-			$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) ?? null;
+			// $nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) ?? null;
+			$nonce = isset( $_POST['_wpnonce'] )
+				? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) )
+				: null;
 
 			if( !wp_verify_nonce( $nonce, 'deafe_admin_nonce' )){
 				wp_send_json_error( 'Invalid Request' );
 			}
 
-			$data = json_decode( stripslashes( $_POST['data'] ), true );
+			// Add this capability check
+			if( !current_user_can( 'manage_options' ) ) {
+				wp_send_json_error( 'Unauthorized' );
+			}
+
+			// $data = json_decode( stripslashes( $_POST['data'] ), true );
+			$data = isset( $_POST['data'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['data'] ) ) : array();
 			$db_data = get_option( 'deafeGetWidgets', [] );
 
 			if( !isset( $data ) && $db_data ){
@@ -79,9 +88,8 @@ if(!class_exists("DEAFEAdminMenu")) {
 				data-info='<?php echo esc_attr( wp_json_encode( [
 					'version' => DEAFE_VERSION,
 					'nonce' => wp_create_nonce( 'deafe_admin_nonce' ),
-					'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
-					'isPremium' => deafeIsPremium(),
-					'hasPro' => DEAFE_HAS_PRO,
+					false,
+					false,
 					'action' => 'deafeGetBlocks',
 					'pricingUrl' => admin_url( 'admin.php?page=document-embedder-addons-for-elementor#/pricing' ),
 				] ) ); ?>'

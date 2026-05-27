@@ -1,14 +1,14 @@
 === Document Embedder Addons for Elementor – Embed Documents in Elementor Websites ===
-Plugin Name: Document Embedder Addons For Elementor
-Version: 1.1.7
+Plugin Name: Document Embedder Addons for Elementor – Embed Documents in Elementor Websites
+Version: 1.1.9
 Author: bplugins, abuhayat, shehabulislam
 Author URI: http://bplugins.com
 Plugin URI: https://bplugins.com/products/document-embedder-addons-for-elementor
-Contributors: abuhayat,bplugins, shehabulislam, hazrath, freemius
+Contributors: abuhayat,bplugins, shehabulislam, hazrath
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
 Requires at least: 5.1
-Tested up to: 6.9
-Stable tag: 1.1.7
+Tested up to: 7.0
+Stable tag: 1.1.9
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -94,6 +94,93 @@ Stay connected and get the latest updates:
 👉 [Follow us on YouTube](https://www.youtube.com/@bplugins)
 👉 [Our Official Support](https://bplugins.com/support/)
 
+== External services ==
+
+This plugin connects to the following external services from the admin dashboard:
+
+= bPlugins API =
+
+* Service URL: https://api.bplugins.com
+* Purpose: The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
+* Data Sent: Only the plugin slug is transmitted; no personal or site data is collected.
+* Terms of Service: https://bplugins.com/terms-of-service/
+* Privacy Policy: https://bplugins.com/privacy-policy/
+
+= bpl-tools =
+* Source: GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+= WordPress.org Plugins API =
+
+* Service URL: https://api.wordpress.org/plugins/info/1.2/
+* Purpose: The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
+* Data Sent: Plugin slugs and author name; no personal or site data is collected.
+* Terms of Service: https://wordpress.org/about/tos/
+* Privacy Policy: https://wordpress.org/about/privacy/
+
+= Google Docs Viewer =
+
+This plugin uses Google Docs Viewer to render PDF, Excel, and PowerPoint files directly in the browser.
+
+* Service URL: https://docs.google.com/viewer
+* Purpose: Used to preview and display supported documents inside the frontend viewer widgets.
+* Data Sent: The publicly accessible URL of the document is sent to Google's servers to generate the document preview.
+* When Data is Sent: Data is sent only when a visitor opens a page containing a document viewer widget that uses Google Docs Viewer.
+* Terms of Service: https://policies.google.com/terms
+* Privacy Policy: https://policies.google.com/privacy
+
+= Microsoft Office Online Viewer =
+
+This plugin uses Microsoft Office Online Viewer to render Word, Excel, and PowerPoint documents directly in the browser.
+
+* Service URL: https://view.officeapps.live.com
+* Purpose: Used to preview and display Microsoft Office documents inside the frontend viewer widgets.
+* Data Sent: The publicly accessible URL of the document is sent to Microsoft's servers to generate the document preview.
+* When Data is Sent: Data is sent only when a visitor opens a page containing a document viewer widget that uses Microsoft Office Online Viewer.
+* Terms of Service: https://www.microsoft.com/en-us/legal/terms-of-use
+* Privacy Policy: https://privacy.microsoft.com/en-us/privacystatement
+
+= Freemius SDK & checkout.freemius.com =
+
+* Service URL: https://freemius.com
+* Purpose: Handles license activation, opt-in telemetry/analytics, and secure premium upgrades.
+* Data Sent: Site URL, administrator email, PHP & WordPress versions, active plugins list, and license keys.
+* Terms of Service: https://freemius.com/terms/
+* Privacy Policy: https://freemius.com/privacy/
+
+= snippet.embedpdf.com =
+
+* Service URL: https://snippet.embedpdf.com
+* Purpose: Renders the sleek interactive PDF preview layout inside the frontend Sleek PDF Viewer widget.
+* Data Sent: Document file URL, browser user agent, and visitor IP address.
+* Terms of Service: https://embedpdf.com/terms
+* Privacy Policy: https://embedpdf.com/privacy
+
+= Google Fonts =
+
+* Service URL: https://fonts.googleapis.com
+* Purpose: Delivers Lato and Roboto font faces for the admin settings dashboard.
+* Data Sent: Browser details and visitor IP address (standard HTTP headers).
+* Terms of Service: https://policies.google.com/terms
+* Privacy Policy: https://policies.google.com/privacy
+
+== Source Code ==
+
+The full uncompressed source code for this plugin is publicly available here:
+https://github.com/bPlugins/document-embedder-addons-for-elementor-wp.git
+
+This repository includes all development files, including the 'src' directory,
+SCSS, JSX, build scripts, and instructions for generating the production build
+contained in the plugin.
+
+== Build Instructions ==
+
+This plugin uses React and webpack for the admin dashboard. To compile the source code, please run the following commands from the plugin root directory:
+1. `npm install`
+2. `npm run build`
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -167,6 +254,19 @@ Our dedicated support team is ready to help! Please submit your questions or iss
 11. Google Slide Viewer
 
 == Changelog ==
+
+= 1.1.9 – 22-May-26 =
+* Update: Cleaned up core file call.
+* Update: Add the dependency plugin.
+* Fix: Resolved all plugin check issues.
+* New: Released version 1.1.9.
+
+= 1.1.8 – 11-May-26 =
+* Update: Cleaned up the codebase and removed unused dependencies.
+* Update: Improved the presentation of premium-only settings with intuitive notice cards.
+* Update: Refactored the codebase, including improvements to prefixes, text domains, nonce validation, escaping, and overall coding standards.
+* Fix: Resolved all plugin check issues.
+* New: Released version 1.1.8.
 
 = 1.1.7 18-Apr-26 =
 * Fixed: PHP Fatal error on elementor editor

@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.elementor-element .icon .bl_icon::after {
+.elementor-element .icon .deafe_icon::after {
   content: "DE";
   font-size: 11px;
   position: absolute;
