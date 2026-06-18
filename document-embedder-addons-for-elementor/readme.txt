@@ -1,14 +1,14 @@
 === Document Embedder Addons for Elementor – Embed Documents in Elementor Websites ===
 Plugin Name: Document Embedder Addons for Elementor – Embed Documents in Elementor Websites
-Version: 1.1.9
+Version: 1.1.10
 Author: bplugins, abuhayat, shehabulislam
 Author URI: http://bplugins.com
 Plugin URI: https://bplugins.com/products/document-embedder-addons-for-elementor
 Contributors: abuhayat,bplugins, shehabulislam, hazrath
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
-Requires at least: 5.1
+Requires at least: 5.3
 Tested up to: 7.0
-Stable tag: 1.1.9
+Stable tag: 1.1.10
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -254,6 +254,10 @@ Our dedicated support team is ready to help! Please submit your questions or iss
 11. Google Slide Viewer
 
 == Changelog ==
+
+= 1.1.10 18-June-26 =
+* Fix: Resolved all widgets missing issue.
+* New: Released version 1.1.10.
 
 = 1.1.9 – 22-May-26 =
 * Update: Cleaned up core file call.

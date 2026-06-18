@@ -12,7 +12,7 @@ class deafe_sleek_pdf_viewer extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-sleek-pdf-viewer';
+		return 'bae-sleek-pdf-viewer';
 	}
 
 	public function get_title() {

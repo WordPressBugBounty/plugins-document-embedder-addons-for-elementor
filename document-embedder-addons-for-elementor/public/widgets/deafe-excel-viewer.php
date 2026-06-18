@@ -12,7 +12,7 @@ class deafe_excel_viewer extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-excel-viewer';
+		return 'bae-excel-viewer';
 	}
 
 	public function get_title() {

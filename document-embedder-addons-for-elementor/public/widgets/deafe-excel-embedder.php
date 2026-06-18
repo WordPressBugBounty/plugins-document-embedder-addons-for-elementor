@@ -12,7 +12,7 @@ class deafe_excel_embedder extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-xlsx-embedder';
+		return 'bae-xlsx-embedder';
 	}
 
 	public function get_title() {

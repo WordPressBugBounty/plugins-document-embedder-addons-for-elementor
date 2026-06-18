@@ -12,7 +12,7 @@ class deafe_pp_embedder extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-pp-embedder';
+		return 'bae-pp-embedder';
 	}
 
 	public function get_title() {

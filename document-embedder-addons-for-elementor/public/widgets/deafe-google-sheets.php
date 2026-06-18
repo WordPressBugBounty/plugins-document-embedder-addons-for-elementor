@@ -12,7 +12,7 @@ class deafe_google_sheets extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-google-sheets';
+		return 'bae-google-sheets';
 	}
 
 	public function get_title() {

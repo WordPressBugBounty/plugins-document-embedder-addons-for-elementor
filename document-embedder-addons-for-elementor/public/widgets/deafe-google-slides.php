@@ -12,7 +12,7 @@ class deafe_google_slides extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-google-slides';
+		return 'bae-google-slides';
 	}
 
 	public function get_title() {

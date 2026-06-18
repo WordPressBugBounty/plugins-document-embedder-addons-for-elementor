@@ -6,8 +6,8 @@ if(!class_exists("DEAFEAdminMenu")) {
 		public function __construct() {
 			add_action( 'admin_menu', [ $this, 'deafeAdminMenu' ] );
 			add_action( 'admin_enqueue_scripts', [$this, 'deafeAdminEnqueueScripts'] );
-			add_action('wp_ajax_deafeGetBlocks', [ $this, 'deafeGetBlocks' ]);
-			add_action('admin_head', [ $this, 'deafeIconImgSizeStyle' ]);
+			add_action( 'wp_ajax_deafeGetBlocks', [ $this, 'deafeGetBlocks' ]);
+			add_action( 'admin_head', [ $this, 'deafeIconImgSizeStyle' ]);
 		}
 
 		public function deafeIconImgSizeStyle() {
@@ -55,10 +55,7 @@ if(!class_exists("DEAFEAdminMenu")) {
 		}
 
 		public function deafeGetBlocks(){
-			// $nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) ?? null;
-			$nonce = isset( $_POST['_wpnonce'] )
-				? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) )
-				: null;
+			$nonce = sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) ?? null;			
 
 			if( !wp_verify_nonce( $nonce, 'deafe_admin_nonce' )){
 				wp_send_json_error( 'Invalid Request' );
@@ -69,8 +66,8 @@ if(!class_exists("DEAFEAdminMenu")) {
 				wp_send_json_error( 'Unauthorized' );
 			}
 
-			// $data = json_decode( stripslashes( $_POST['data'] ), true );
-			$data = isset( $_POST['data'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['data'] ) ) : array();
+			$data = json_decode( stripslashes( $_POST['data'] ), true );
+			
 			$db_data = get_option( 'deafeGetWidgets', [] );
 
 			if( !isset( $data ) && $db_data ){

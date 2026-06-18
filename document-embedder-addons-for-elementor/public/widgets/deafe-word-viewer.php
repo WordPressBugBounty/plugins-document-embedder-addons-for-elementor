@@ -12,7 +12,7 @@ class deafe_word_viewer extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-word-viewer';
+		return 'bae-word-viewer';
 	}
 
 	public function get_title() {

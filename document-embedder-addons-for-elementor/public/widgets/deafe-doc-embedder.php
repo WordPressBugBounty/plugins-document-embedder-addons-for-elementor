@@ -12,7 +12,7 @@ class deafe_doc_embedder extends Widget_Base {
 
 	use DEAFE_Common_Settings_Render;
 	public function get_name() {
-		return 'deafe-doc-embedder';
+		return 'bae-doc-embedder';
 	}
 
 	public function get_title() {
