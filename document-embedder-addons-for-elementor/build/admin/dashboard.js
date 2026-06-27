@@ -15022,6 +15022,10 @@ const dashboardInfo = info => {
     },
     proFeatures: ['Adobe PDF Viewer: A reliable, feature-rich PDF viewer powered by Adobe’s PDF engine.', 'Document Library: Organize and manage all your embedded documents in one centralized location with easy access and quick reusable upload', 'Pdf.js PDF Viewer: Display your PDF in premium look with the pdf.js library', 'Search functionality within Adobe PDF embedded documents.', 'Allow users to highlight and annotate documents.', 'Add watermarks to embedded documents for branding and security.', 'Add content protection features to prevent unauthorized downloading or copying of embedded documents.', 'Centralized hub to organize and manage all your embedded documents.', 'Lightbox display option for a more immersive viewing experience.', 'Priority support for any issues or questions related to the plugin.'],
     changelogs: [{
+      version: '1.2.0 27-June-26',
+      type: 'update',
+      list: ['Update: Add new version of Freemius SDK.', 'Released version 1.2.0.']
+    }, {
       version: '1.1.10 18-June-26',
       type: 'fix',
       list: ['Resolved all widgets missing issue.', 'Released version 1.1.10.']
