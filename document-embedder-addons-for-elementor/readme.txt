@@ -1,6 +1,6 @@
 === Document Embedder Addons for Elementor – Embed Documents in Elementor Websites ===
 Plugin Name: Document Embedder Addons for Elementor – Embed Documents in Elementor Websites
-Version: 1.2.1
+Version: 1.2.2
 Author: bplugins, abuhayat, shehabulislam
 Author URI: http://bplugins.com
 Plugin URI: https://bplugins.com/products/document-embedder-addons-for-elementor
@@ -8,7 +8,7 @@ Contributors: abuhayat,bplugins, shehabulislam, hazrath
 Tags: elementor, elementor addons, elementor widget, embed pdf, google docs
 Requires at least: 5.3
 Tested up to: 7.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -18,7 +18,7 @@ Document Embedder Addons for Elementor makes it simple to embed PDFs, Word docs,
 
 == Description ==
 
-Easily share important documents on your website without redirecting visitors elsewhere. [Document Embedder Addons for Elementor](https://bplugins.com/products/document-embedder-addons-for-elementor/) gives you 16 ready-to-use widgets that display PDFs, Word files, spreadsheets, presentations, Google Docs, Google Sheets, Google Slides, and more directly in your pages. Just drag and drop any file from your media library, tweak the size and style, and watch it fit perfectly into your design.
+Easily share important documents on your website without redirecting visitors elsewhere. [Document Embedder Addons for Elementor](https://bplugins.com/products/document-embedder-addons-for-elementor/) gives you 17 ready-to-use widgets that display PDFs, Word files, spreadsheets, presentations, Google Docs, Google Sheets, Google Slides, and more directly in your pages. Just drag and drop any file from your media library, tweak the size and style, and watch it fit perfectly into your design.
 
 Perfect for businesses sharing contracts, teachers displaying worksheets, or course creators embedding lesson materials—this addon keeps users engaged on your site with smooth, responsive viewing. No coding required, and everything works beautifully on mobile devices too.
 
@@ -30,7 +30,7 @@ Perfect for businesses sharing contracts, teachers displaying worksheets, or cou
 - **Keep Visitors on Your Site:** No external apps or redirects—documents open right in place.
 - **Fully Responsive:** Looks great on phones, tablets, and desktops automatically.
 - **Easy Customization:** Control width, height, alignment, filenames, and download buttons.
-- **15 Specialized Widgets:** From general docs to Word, Excel, Adobe PDF Viewer, and more.
+- **17 Specialized Widgets:** From general docs to Word, Excel, Adobe PDF Viewer, and more.
 - **No Extra Setup:** Works instantly with Elementor Free or Pro.
 - **Regular Updates:** New widgets and features are added regularly to keep your website fresh.
 
@@ -51,9 +51,10 @@ https://www.youtube.com/watch?v=OtJayJ8N-5c
 - **Google Slides Embedder**: Embed Google Slides presentations that stay current with updates.
 - **PDF Native Embedder**: Use your browser's built-in PDF viewer for fast loading.
 - **Sleek PDF Viewer**: A stylish, branded PDF viewer with custom colors and a minimal toolbar.
-- **3D Flip PDF Viewer**: Create an interactive flipbook effect for PDFs with a page-turning experience.
+- **3D Flip PDF Viewer(Pro)**: Create an interactive flipbook effect for PDFs with a page-turning experience.
 - **Adobe PDF Viewer(Pro)**: A reliable, feature-rich PDF viewer powered by Adobe's PDF engine.
 - **Document Library(Pro)**: Organize and manage all your embedded documents in one centralized location with easy access and quick reusable uploads.
+- **Modern Document Library(Pro)**: Display, organize, and manage files in 12 elegant layout styles (Premium Grid, Sleek List, Minimalist Rows, Bold Accent Cards, Duo-Tone Grid Cards, Classic File Table, Floating Actions Grid, Glassmorphic Cards, Timeline Rows, Split Timeline, Styled Table View, and Glowing Timeline).
 - **Pdf.js PDF Viewer(Pro)**: Display your PDF in premium look with the pdf.js library.
 
 === Key Features ===
@@ -62,6 +63,7 @@ https://www.youtube.com/watch?v=OtJayJ8N-5c
 - **Flipbook Viewer**: Create interactive flipbook-style PDF viewers.
 - **Document Download**: Download functionality within embedded documents.
 - **Document Library(Pro)**: Centralized hub to organize and manage all your embedded documents.
+- **Modern Document Library(Pro)**: Showcase documents using 12 premium layout designs with search and filters.
 - **Annotated Document(Pro)**: Allow users to highlight and annotate documents.
 - **Document Search(Pro)**: Search functionality within Adobe PDF embedded documents.
 
@@ -254,6 +256,12 @@ Our dedicated support team is ready to help! Please submit your questions or iss
 11. Google Slide Viewer
 
 == Changelog ==
+
+= 1.2.2 06-Aug-26 =
+* Add new Widget Modern Document Library
+* Add Timeline Document View
+* Add Duo-Tone Documen View
+* Add Premium Grid Document View
 
 = 1.2.1 12-July-26 =
 * Update freemius SDK version 2.13.4
