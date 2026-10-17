@@ -214,7 +214,7 @@ class deafe_excel_embedder extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the excel file link from setting widget.','document-embedder-addons-for-elementor'); ?></h3></center>
 		<?php else: ?>
 			<div class="my-excel">
-			<iframe src="https://docs.google.com/viewer?url=<?php echo esc_url($final_xlsx_link);?>&amp;embedded=true" allowfullscreen>
+			<iframe src="https://docs.google.com/viewer?url=<?php echo esc_url($final_xlsx_link);?>&amp;embedded=true" title="<?php esc_attr_e( 'Excel Embedder', 'document-embedder-addons-for-elementor' ); ?>" allowfullscreen>
 			</iframe>
 			</div>
 		<?php endif; 

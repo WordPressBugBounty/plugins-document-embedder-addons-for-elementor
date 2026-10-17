@@ -231,7 +231,7 @@ class deafe_doc_embedder extends Widget_Base {
 		<h3><?php echo esc_html__('Paste the pdf file link from setting widget.','document-embedder-addons-for-elementor') ?></h3>
 	<?php } else { ?>
       <div class="my-doc">
-		<iframe src="<?php echo esc_url($source);?>&amp;embedded=true"  allowfullscreen>
+		<iframe src="<?php echo esc_url($source);?>&amp;embedded=true" title="<?php esc_attr_e( 'Document Embedder', 'document-embedder-addons-for-elementor' ); ?>" allowfullscreen>
 		</iframe>
 	</div>
 	<?php } 

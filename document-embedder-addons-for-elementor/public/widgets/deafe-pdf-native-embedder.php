@@ -289,7 +289,7 @@ class deafe_pdf_native_embedder extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the pdf file link from setting widget.','document-embedder-addons-for-elementor') ?></h3></center>
 		<?php else: ?>
 		<div class="my_native">
-			<iframe src="<?php echo esc_url($final_pdf_link); ?>"></iframe>
+			<iframe src="<?php echo esc_url($final_pdf_link); ?>" title="<?php esc_attr_e( 'PDF Viewer', 'document-embedder-addons-for-elementor' ); ?>"></iframe>
 		</div>
 	<?php endif; 
 	}

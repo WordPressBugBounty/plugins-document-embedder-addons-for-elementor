@@ -261,7 +261,7 @@ class deafe_google_sheets extends Widget_Base {
 				<center><h3><?php echo esc_html__('Paste the excel file link from setting widget.','document-embedder-addons-for-elementor'); ?></h3></center>
 			<?php else: ?>
 				<div class="google_sheet_style">
-					<iframe src="<?php echo esc_url($final_word_link); ?>"></iframe>
+					<iframe src="<?php echo esc_url($final_word_link); ?>" title="<?php esc_attr_e( 'Google Sheets Embedder', 'document-embedder-addons-for-elementor' ); ?>"></iframe>
 				</div>
 			<?php endif; 
 	}

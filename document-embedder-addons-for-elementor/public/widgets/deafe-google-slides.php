@@ -260,7 +260,7 @@ class deafe_google_slides extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the powerpoint file link from setting widget.','document-embedder-addons-for-elementor'); ?></h3></center>
 		<?php else: ?>
 			<div class="g_slides">
-			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link); ?>" >
+			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link); ?>" title="<?php esc_attr_e( 'Google Slides Embedder', 'document-embedder-addons-for-elementor' ); ?>" >
 			</iframe>
 			</div>
 		<?php endif;

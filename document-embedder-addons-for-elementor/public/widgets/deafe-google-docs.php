@@ -270,7 +270,7 @@ class deafe_google_docs extends Widget_Base {
 			</center>
 		<?php else: ?>
 			<div class="google_docs_style">
-				<iframe src=<?php echo esc_url($source); ?>></iframe>
+				<iframe src=<?php echo esc_url($source); ?> title="<?php esc_attr_e( 'Google Docs Embedder', 'document-embedder-addons-for-elementor' ); ?>"></iframe>
 			</div>
 		<?php endif; 
 	}

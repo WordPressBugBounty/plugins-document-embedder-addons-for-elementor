@@ -294,7 +294,7 @@ class deafe_word_viewer extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the word file link from setting widget.','document-embedder-addons-for-elementor'); ?></h3></center>
 		<?php else: ?>
 		<div class="word_viewer">
-			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link);?>">
+			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link);?>" title="<?php esc_attr_e( 'Word Viewer', 'document-embedder-addons-for-elementor' ); ?>">
 			</iframe>
 		</div>
 	<?php endif;
