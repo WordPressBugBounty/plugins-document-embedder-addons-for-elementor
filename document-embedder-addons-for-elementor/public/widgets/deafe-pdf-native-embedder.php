@@ -235,6 +235,21 @@ class deafe_pdf_native_embedder extends Widget_Base {
             ]
         );
 
+		$this->add_control(
+			'iframe_title',
+			[
+				'label'		 => esc_html__( 'iFrame Attribute Title', 'document-embedder-addons-for-elementor' ),
+				'type'		 => Controls_Manager::TEXT,
+				'label_block' => true,
+				'placeholder' => esc_html__( 'PDF Viewer', 'document-embedder-addons-for-elementor' ),
+				'description' => esc_html__( 'Sets the title attribute on the iframe for accessibility.', 'document-embedder-addons-for-elementor' ),
+				'separator'   => 'before',
+				'dynamic'	 => [
+					'active' => true,
+				],
+			]
+		);
+
 		$this->end_controls_section();
 
     
@@ -267,7 +282,8 @@ class deafe_pdf_native_embedder extends Widget_Base {
 		$file_name_text = $settings[ 'file_name_text' ];
 		$download_btn_text = $settings[ 'download_btn_text' ];
 		$final_pdf_link = '';		
-		$source_type = $settings['choose_source'];		
+		$source_type = $settings['choose_source'];
+		$iframe_title = ! empty( $settings['iframe_title'] ) ? $settings['iframe_title'] : __( 'PDF Viewer', 'document-embedder-addons-for-elementor' );
 		if($source_type){
 			$final_pdf_link = isset($pdf_url['url']) ? $pdf_url['url'] : '';
 		}else{
@@ -289,7 +305,7 @@ class deafe_pdf_native_embedder extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the pdf file link from setting widget.','document-embedder-addons-for-elementor') ?></h3></center>
 		<?php else: ?>
 		<div class="my_native">
-			<iframe src="<?php echo esc_url($final_pdf_link); ?>" title="<?php esc_attr_e( 'PDF Viewer', 'document-embedder-addons-for-elementor' ); ?>"></iframe>
+			<iframe src="<?php echo esc_url($final_pdf_link); ?>" title="<?php echo esc_attr( $iframe_title ); ?>"></iframe>
 		</div>
 	<?php endif; 
 	}

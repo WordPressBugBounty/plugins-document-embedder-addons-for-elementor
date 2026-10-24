@@ -214,6 +214,21 @@ class deafe_google_slides extends Widget_Base {
             ]
         );
 
+		$this->add_control(
+			'iframe_title',
+			[
+				'label'		 => esc_html__( 'iFrame Attribute Title', 'document-embedder-addons-for-elementor' ),
+				'type'		 => Controls_Manager::TEXT,
+				'label_block' => true,
+				'placeholder' => esc_html__( 'Google Slides Embedder', 'document-embedder-addons-for-elementor' ),
+				'description' => esc_html__( 'Sets the title attribute on the iframe for accessibility.', 'document-embedder-addons-for-elementor' ),
+				'separator'   => 'before',
+				'dynamic'	 => [
+					'active' => true,
+				],
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->render_common_style_settings();
@@ -243,7 +258,8 @@ class deafe_google_slides extends Widget_Base {
 		$sheets_url = $settings['sheets_url'];
 		$file_name_text = $settings[ 'file_name_text' ];
 		$final_word_link = '';		
-		$source_type = $settings['choose_source'];		
+		$source_type = $settings['choose_source'];
+		$iframe_title = ! empty( $settings['iframe_title'] ) ? $settings['iframe_title'] : __( 'Google Slides Embedder', 'document-embedder-addons-for-elementor' );
 		if($source_type){
 			$final_word_link = isset($sheets_url['url']) ? $sheets_url['url'] : '';
 		}else{
@@ -260,7 +276,7 @@ class deafe_google_slides extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the powerpoint file link from setting widget.','document-embedder-addons-for-elementor'); ?></h3></center>
 		<?php else: ?>
 			<div class="g_slides">
-			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link); ?>" title="<?php esc_attr_e( 'Google Slides Embedder', 'document-embedder-addons-for-elementor' ); ?>" >
+			<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($final_word_link); ?>" title="<?php echo esc_attr( $iframe_title ); ?>" >
 			</iframe>
 			</div>
 		<?php endif;

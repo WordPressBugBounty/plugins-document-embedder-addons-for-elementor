@@ -185,6 +185,20 @@ class deafe_pp_embedder extends Widget_Base {
 				'toggle' 	=> true,
 			]
 		);
+		$this->add_control(
+			'iframe_title',
+			[
+				'label'		 => esc_html__( 'iFrame Attribute Title', 'document-embedder-addons-for-elementor' ),
+				'type'		 => Controls_Manager::TEXT,
+				'label_block' => true,
+				'placeholder' => esc_html__( 'PowerPoint Embedder', 'document-embedder-addons-for-elementor' ),
+				'description' => esc_html__( 'Sets the title attribute on the iframe for accessibility.', 'document-embedder-addons-for-elementor' ),
+				'separator'   => 'before',
+				'dynamic'	 => [
+					'active' => true,
+				],
+			]
+		);
 		$this->end_controls_section();
 
 		$this->render_common_style_settings();
@@ -212,7 +226,8 @@ class deafe_pp_embedder extends Widget_Base {
 		$pptx_file = $settings['pptx_file'];
 		$pptx_url = $settings['pptx_url'];
 		$final_pptx_link = '';		
-		$source_type = $settings['choose_source'];		
+		$source_type = $settings['choose_source'];
+		$iframe_title = ! empty( $settings['iframe_title'] ) ? $settings['iframe_title'] : __( 'PowerPoint Embedder', 'document-embedder-addons-for-elementor' );
 		if($source_type){
 			$final_pptx_link = isset($pptx_url['url']) ? $pptx_url['url'] : '';
 		}else{
@@ -222,7 +237,7 @@ class deafe_pp_embedder extends Widget_Base {
 			<center><h3><?php esc_html_e('Paste the powerpoint file link from setting widget.','document-embedder-addons-for-elementor') ?></h3></center>
 		<?php else: ?>
 			<div class="powerpoin_embeder">
-				<iframe src="https://docs.google.com/viewer?url=<?php echo esc_url($final_pptx_link); ?> &amp;embedded=true" title="<?php esc_attr_e( 'PowerPoint Embedder', 'document-embedder-addons-for-elementor' ); ?>" allowfullscreen></iframe>
+				<iframe src="https://docs.google.com/viewer?url=<?php echo esc_url($final_pptx_link); ?> &amp;embedded=true" title="<?php echo esc_attr( $iframe_title ); ?>" allowfullscreen></iframe>
 			</div>	
 		<?php endif; 
 		

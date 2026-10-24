@@ -214,6 +214,21 @@ class deafe_google_docs extends Widget_Base {
             ]
         );
 
+		$this->add_control(
+			'iframe_title',
+			[
+				'label'		 => esc_html__( 'iFrame Attribute Title', 'document-embedder-addons-for-elementor' ),
+				'type'		 => Controls_Manager::TEXT,
+				'label_block' => true,
+				'placeholder' => esc_html__( 'Google Docs Embedder', 'document-embedder-addons-for-elementor' ),
+				'description' => esc_html__( 'Sets the title attribute on the iframe for accessibility.', 'document-embedder-addons-for-elementor' ),
+				'separator'   => 'before',
+				'dynamic'	 => [
+					'active' => true,
+				],
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->render_common_style_settings();
@@ -244,6 +259,7 @@ class deafe_google_docs extends Widget_Base {
 		$final_word_link = '';		
 		$source_type = $settings['choose_source'];	
 		$viewer = 'https://view.officeapps.live.com/op/embed.aspx?src=';
+		$iframe_title = ! empty( $settings['iframe_title'] ) ? $settings['iframe_title'] : __( 'Google Docs Embedder', 'document-embedder-addons-for-elementor' );
 		if($source_type){
 			$final_word_link = isset($sheets_url['url']) ? $sheets_url['url'] : '';
 		}else{
@@ -270,7 +286,7 @@ class deafe_google_docs extends Widget_Base {
 			</center>
 		<?php else: ?>
 			<div class="google_docs_style">
-				<iframe src=<?php echo esc_url($source); ?> title="<?php esc_attr_e( 'Google Docs Embedder', 'document-embedder-addons-for-elementor' ); ?>"></iframe>
+				<iframe src="<?php echo esc_url($source); ?>" title="<?php echo esc_attr( $iframe_title ); ?>"></iframe>
 			</div>
 		<?php endif; 
 	}

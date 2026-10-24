@@ -189,6 +189,20 @@ class deafe_pdf_embedder extends Widget_Base {
 				'toggle' 	=> true,
 			]
 		);
+		$this->add_control(
+			'iframe_title',
+			[
+				'label'		 => esc_html__( 'iFrame Attribute Title', 'document-embedder-addons-for-elementor' ),
+				'type'		 => Controls_Manager::TEXT,
+				'label_block' => true,
+				'placeholder' => esc_html__( 'PDF Embedder', 'document-embedder-addons-for-elementor' ),
+				'description' => esc_html__( 'Sets the title attribute on the iframe for accessibility.', 'document-embedder-addons-for-elementor' ),
+				'separator'   => 'before',
+				'dynamic'	 => [
+					'active' => true,
+				],
+			]
+		);
 		$this->end_controls_section();
 
 		$this->render_common_style_settings();
@@ -216,7 +230,8 @@ class deafe_pdf_embedder extends Widget_Base {
 		$PDF_file = $settings['pdf_file'];
 		$PDF_url = $settings['pdf_url'];
 		$final_PDF_link = '';		
-		$source_type = $settings['choose_source'];		
+		$source_type = $settings['choose_source'];
+		$iframe_title = ! empty( $settings['iframe_title'] ) ? $settings['iframe_title'] : __( 'PDF Embedder', 'document-embedder-addons-for-elementor' );
 		if($source_type){
 			$final_PDF_link = isset($PDF_url['url']) ? $PDF_url['url'] : '';
 		}else{
@@ -238,7 +253,7 @@ class deafe_pdf_embedder extends Widget_Base {
 		<h3><?php echo esc_html__('Paste the pdf file link from setting widget.','document-embedder-addons-for-elementor') ?></h3>
 	<?php } else { ?>
       <div class="my-PDF bae-pdf">
-		<iframe src="<?php echo esc_url($source);?>&amp;embedded=true" title="<?php esc_attr_e( 'PDF Embedder', 'document-embedder-addons-for-elementor' ); ?>" allowfullscreen>
+		<iframe src="<?php echo esc_url($source);?>&amp;embedded=true" title="<?php echo esc_attr( $iframe_title ); ?>" allowfullscreen>
 		</iframe>
 	</div>
 	<?php } 
